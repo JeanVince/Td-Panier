@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Système de Panier E-commerce</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 min-h-screen m-8">
+    <div class="container mx-auto  ">
+      <h1 class="text-3xl font-bold mb-8 text-center">Boutique en ligne</h1>
+
+      <!-- Liste des produits -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="product-list">
+        <!-- Les produits seront ajoutés dynamiquement ici -->
+      </div>
+
+      <!-- Panier -->
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold mb-4">Votre Panier</h2>
+        <table id="cart-items"
+          class="w-screen border-collapse border border-slate-400 mx-auto text-left"
+        >
+          <thead class="bg-red-400 text-center text-xl">
+            <tr>
+              <th class="border border-slate-600">Produits</th>
+              <th class="border border-slate-600">Quantité</th>
+              <th class="border border-slate-600">Total</th>
+              <th class="border border-slate-600">Options</th>
+            </tr>
+          </thead>
+       
+        </table>
+        <div class="mt-4 flex justify-between items-center">
+          <span class="text-xl font-bold">Total:</span>
+          <span id="cart-total" class="text-xl font-bold">0 FCFA</span>
+        </div>
+        <button
+          id="checkout"
+          class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none"
+        >
+          Passer à la caisse
+        </button>
+   
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
